@@ -156,7 +156,7 @@ __forceinline__ __device__ bool in_frustum(int idx,
 		if (prefiltered)
 		{
 			printf("Point is filtered although prefiltered is set. This shouldn't happen!");
-			__trap();
+			assert(false);
 		}
 		return false;
 	}
